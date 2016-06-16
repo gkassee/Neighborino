@@ -1,0 +1,13 @@
+<p class="signin-logo">neighborino</p>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<% if current_user %>
+
+	<p>Signed In As: <h1><%= current_user.name %></h1></p>
+	<%= button_to "Sign Out", "sign_out", method: :delete %>
+
+<% else %>
+
+	<%= link_to "Twitter Login", "auth/twitter" %>
+
+<% end %>

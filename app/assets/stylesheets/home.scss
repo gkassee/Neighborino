@@ -1,0 +1,19 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-image: url("china.jpg")
+}
+
+.signin-logo {
+	color: white;
+	font-family: 'Annie Use Your Telescope', cursive;
+	/*font-family: 'Sue Ellen Francisco', cursive;*/
+	font-size: 100px;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+	border: 1px white solid;
+	text-shadow: 4px 4px black;
+}
