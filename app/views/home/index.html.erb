@@ -3,7 +3,9 @@
 
 <% if current_user %>
 
-	<p>Signed In As: <h1><%= current_user.name %></h1></p>
+	<p>Signed In As: <h1><%= current_user.name %></h1>
+	City: <h3><%= current_user.city %>, <%= current_user.state %></h3>
+	</p>
 	<%= button_to "Sign Out", "sign_out", method: :delete %>
 
 <% else %>

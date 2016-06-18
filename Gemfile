@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'geocoder'
 # Should allow login with Twitter...
 gem 'omniauth-twitter'
+# Adding actual Twitter functionality...
+gem 'twitter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 gem 'rails', '4.2.6'

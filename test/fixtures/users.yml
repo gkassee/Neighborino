@@ -2,14 +2,24 @@
 
 one:
   provider: MyString
-  email: MyString
-  password_digest: MyString
   uid: MyString
   name: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  email: MyString
+  password_digest: MyString
 
 two:
   provider: MyString
-  email: MyString
-  password_digest: MyString
   uid: MyString
   name: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: 1
+  email: MyString
+  password_digest: MyString
