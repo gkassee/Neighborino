@@ -1,0 +1,21 @@
+<h1>User#edit</h1>
+<p>Find me in app/views/user/edit.html.erb</p>
+
+<%= form_for @user, url: {action: 'update'} do |f| %>
+	<%= f.label :Username %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label :Address %>
+	<%= f.text_field :address1 %>
+	<br>
+	<%= f.label :City %>
+	<%= f.text_field :city %>
+	<br>
+	<%= f.label :State %>
+	<%= f.text_field :state %>
+	<br>
+	<%= f.label :zip %>
+	<%= f.text_field :zip %>
+	<br>
+	<%= f.submit "Save Changes" %>
+<% end %>

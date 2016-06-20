@@ -1,15 +1,20 @@
 <p class="signin-logo">neighborino</p>
 <p>Find me in app/views/home/index.html.erb</p>
 
+
 <% if current_user %>
 
-	<p>Signed In As: <h1><%= current_user.name %></h1>
-	City: <h3><%= current_user.city %>, <%= current_user.state %></h3>
-	</p>
-	<%= button_to "Sign Out", "sign_out", method: :delete %>
+		<p>Signed In As: <h1><%= current_user.name %></h1>
+		City: <h3>
+		<%= current_user.address1 %>
+		<%= current_user.city %>, <%= current_user.state %>, <%= current_user.zip %></h3>
+		</p>
+		<%= button_to "Edit My Account", edit_user_path(@user), method: :get %>
+		<%= button_to "Delete My Account", "user_delete", method: :delete %>
+		<%= button_to "Sign Out", "sign_out", method: :delete %>
 
 <% else %>
 
-	<%= link_to "Twitter Login", "auth/twitter" %>
+		<%= link_to "Twitter Login", "auth/twitter" %>
 
 <% end %>
