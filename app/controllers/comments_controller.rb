@@ -5,10 +5,10 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-		@question = current_user.comments.last.question_id
 		@comment = Comment.new(comment_params)
     if @comment.save
-  		redirect_to :back
+    	@question = current_user.comments.last.question_id
+  		redirect_to question_path(@question)
   		# else
   		# redirect_to posts_path
   	end
