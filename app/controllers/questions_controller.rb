@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
   private
 
 	def question_params
-		params.require(:question).permit(:user_id, :body, :ip_address, :latitude, :longitude)
+		params.require(:question).permit(:user_id, :body, :address, :latitude, :longitude)
 	end
 
 end
