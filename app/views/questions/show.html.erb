@@ -1,2 +1,21 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+<h1><%= @question.body %></h1>
+
+<%= form_for @comment do |f| %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :question_id, :value => params[:id] %>
+			<%= f.label :Comment %>
+			<br>
+			<%= f.text_area :body %>
+			<br>
+			<%= f.submit "Submit Comment" %>
+<% end %>
+
+
+<% @question.comments.each do |c| %>
+	<%= c.body %>
+	<br>
+<% end %>
+
+<br>
+
+<%= link_to "HOME", root_path %>

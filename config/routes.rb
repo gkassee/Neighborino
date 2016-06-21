@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :questions
 
+  resources :comments
+
   root 'home#index'
 
   delete 'sign_out', to: 'sessions#destroy', as: 'sign_out'
