@@ -1,2 +1,8 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<h1><%= @user.name %>'s Questions:</h1>
+<% @user.questions.each do |q| %>
+	<%= q.body %>
+<% end %>
+
+<br>
+
+<%= link_to "HOME", root_path %>

@@ -1,4 +1,8 @@
 class User < ActiveRecord::Base
+
+	has_many :questions
+	has_many :comments
+	
 	# has_secure_password   
 	# validates_confirmation_of :password   
 	# validates_presence_of :password, on: :create

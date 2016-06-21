@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  body: MyString
+  latitude: 1.5
+  longitude: 1.5
+  ip_address: 1.5
+
+two:
+  user_id: 1
+  body: MyString
+  latitude: 1.5
+  longitude: 1.5
+  ip_address: 1.5
