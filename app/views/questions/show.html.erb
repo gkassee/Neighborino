@@ -1,5 +1,14 @@
 <h1><%= @question.body %></h1>
 
+		<br>
+		IP Address: <%= @question.ip_address %>
+		<br>
+		Latitude: <%= @question.latitude %>
+		<br>
+		Longitude: <%= @question.longitude %>
+		<br>
+		<br>
+
 <%= form_for @comment do |f| %>
 			<%= f.hidden_field :user_id, :value => current_user.id %>
 			<%= f.hidden_field :question_id, :value => params[:id] %>
