@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
 			create(
 				provider: auth['provider'],
 				uid: auth['uid'],
-				name: auth['info']['name']
+				name: auth['info']['name'],
+				twitter_handle: auth['info']['nickname']
 			)
 	end
 
