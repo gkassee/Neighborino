@@ -1,5 +1,18 @@
 class QuestionsController < ApplicationController
 
+	def new
+		@question = Question.new
+	end
+
+	def create
+  	@question = Question.new(question_params)
+    if @question.save
+  		redirect_to user_path(current_user)
+  	# else
+  	# 	redirect_to posts_path
+  	end
+  end
+
   def index
   end
 
@@ -8,5 +21,12 @@ class QuestionsController < ApplicationController
 
   def edit
   end
-  
+
+
+  private
+
+	def question_params
+		params.require(:question).permit(:user_id, :body, :ip_address, :latitude, :longitude)
+	end
+
 end
