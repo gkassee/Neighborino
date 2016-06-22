@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
   def address
-  	[address1, city, state, zip].compact.join(', ')
+  	[:address1, :city, :state, :zip].compact.join(', ')
 	end
 
 	geocoded_by :address
