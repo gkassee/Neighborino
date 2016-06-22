@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
   def show
   	@question = Question.find(params[:id])
     @comment = Comment.new
-    @user = User.near("#{@question.latitude}, #{@question.longitude}", 5, :order => :distance)
+    @user = User.near("#{Question.find(params[:id]).latitude}, #{Question.find(params[:id]).longitude}", 5, :order => :distance)
   end
 
 
