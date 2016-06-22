@@ -21,7 +21,7 @@
 
 
 <% @user.each do |user| %>
-		<li><%= link_to user.name, user_path(@user) %> (<%= user.distance.round(2) %> miles) </li>
+		<%= link_to user.name, user_path(@user) %> (<%= user.distance.round(2) %> miles)
 
 <% end %>
 
