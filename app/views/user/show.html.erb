@@ -1,6 +1,7 @@
 <h1><%= @user.name %>'s Questions:</h1>
 
-<%= form_for @question do |f| %>
+<% if current_user %>
+	<%= form_for @question do |f| %>
 			<%= f.hidden_field :user_id, :value => current_user.id %>
 			<%= f.hidden_field :address, :value => request.remote_ip %>
 			<%= f.label :Question %>
@@ -8,8 +9,8 @@
 			<%= f.text_area :body %>
 			<br>
 			<%= f.submit "Submit Question" %>
+	<% end %>
 <% end %>
-
 
 <% @user.questions.each do |q| %>
 	<%= link_to q.body, question_path(q.id) %>
