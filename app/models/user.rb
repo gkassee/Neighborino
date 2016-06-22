@@ -1,5 +1,12 @@
 class User < ActiveRecord::Base
 
+  def address
+  	[address1, city, state, zip].compact.join(', ')
+	end
+
+	geocoded_by :address
+  after_validation :geocode
+
 	has_many :questions
 	has_many :comments
 	
@@ -19,5 +26,6 @@ class User < ActiveRecord::Base
 				twitter_handle: auth['info']['nickname']
 			)
 	end
+
 
 end

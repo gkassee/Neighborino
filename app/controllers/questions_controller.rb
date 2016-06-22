@@ -16,10 +16,14 @@ class QuestionsController < ApplicationController
   def index
   end
 
+
   def show
   	@question = Question.find(params[:id])
     @comment = Comment.new
+    @user = User.near(:address, 50, :order => :distance)
+
   end
+
 
   def edit
   end

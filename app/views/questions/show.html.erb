@@ -20,6 +20,14 @@
 <% end %>
 
 
+<% @user.each do |user| %>
+
+	<% user.nearbys(5).each do |near_user| %>
+		<li><%= link_to user.name, user_path(@user) %> (<%= user.distance.round(2) %> miles) </li>
+	<% end %>
+
+<% end %>
+
 <% @question.comments.each do |c| %>
 	<%= c.body %>
 	<br>
