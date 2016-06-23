@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'geo-distance'
+
 gem 'geocoder'
 # Should allow login with Twitter...
 gem 'omniauth-twitter'

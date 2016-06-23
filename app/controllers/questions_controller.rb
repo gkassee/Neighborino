@@ -20,12 +20,19 @@ class QuestionsController < ApplicationController
   def show
   	@question = Question.find(params[:id])
     @comment = Comment.new
-    @user = User.all
-    # @user = User.near("#{Question.find(params[:id]).latitude}, #{Question.find(params[:id]).longitude}", 5, :order => :distance)
+    # @user = User.all
+    @user = User.near("#{Question.find(params[:id]).latitude}, #{Question.find(params[:id]).longitude}", 5, :order => :distance)
   end
 
 
   def edit
+  end
+
+  def update
+    @question = Question.find(params[:id])
+    @question.update(question_params)
+    @question.save
+    redirect_to root_path
   end
 
 
