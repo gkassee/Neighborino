@@ -1,15 +1,15 @@
 class User < ActiveRecord::Base
 
+	has_many :questions
+	has_many :comments
+
 	#creates one string out of the different address objects on each user
   def address
-  	[address1, city, state, zip].compact.join(', ')
+  	[address1, city, state].compact.join(', ')
 	end
 
 	geocoded_by :address
-  after_update :geocode #gives me new latitude & longitude for the user every time they update their address
-
-	has_many :questions
-	has_many :comments
+  after_validation :geocode #gives me new latitude & longitude for the user every time they update their address
 	
 	# has_secure_password   
 	# validates_confirmation_of :password   
