@@ -23,7 +23,8 @@
 
 <% @user.each do |user| %>
 		<%= link_to user.name, user_path(user.id) %>
-		<% $twitter.update("@#{user.twitter_handle} A new question!")%>
+		<% $twitter.update("@#{user.twitter_handle} #{@question.body}") %>
+		<br>
 
 <% end %>
 
