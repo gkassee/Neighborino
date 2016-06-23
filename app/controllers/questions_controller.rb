@@ -8,6 +8,9 @@ class QuestionsController < ApplicationController
     @user = User.all
   	@question = Question.new(question_params)
 
+
+    if @question.save
+
   		redirect_to user_path(current_user)
   	# else
   	# 	redirect_to posts_path
@@ -22,7 +25,8 @@ class QuestionsController < ApplicationController
   def show
   	@question = Question.find(params[:id])
     @comment = Comment.new
-     @user = User.near("#{@question.latitude}, #{@question.longitude}", 1)
+    # @user = User.all
+     @user = User.near("#{@question.latitude}, #{@question.longitude}", 5)
   end
 
 
