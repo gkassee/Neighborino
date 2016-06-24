@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'geo-distance'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 
 gem 'geocoder'
 # Should allow login with Twitter...
