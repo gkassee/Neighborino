@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   delete 'sign_out', to: 'sessions#destroy', as: 'sign_out'
 
-  get '/auth/:twitter_handle/callback', to: 'sessions#create'
+  get '/auth/:provider/callback', to: 'sessions#create'
 
   delete 'user_delete', to: 'user#destroy', as: 'user_delete'
 
