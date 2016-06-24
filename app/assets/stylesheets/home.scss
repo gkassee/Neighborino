@@ -3,24 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-@media all and (min-width: 319px) and (max-width: 416px) {
+@media all and (min-width: 319px) /*and (max-width: 416px)*/ {
 
 	body {
-		background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/47/CITY_HALL_PHILADELPHIA.jpg");
-		background-size: 2000px;
+		background-image: url("http://66.media.tumblr.com/50203958ffd31694db2605632e9630a4/tumblr_ne5v9izDsp1tnemwao1_1280.jpg");
+		background-size: 1400px;
 		background-position: 53% 40%;
 	}
 
 	.signin-logo {
+		background-color: black;
+		/*color: #FF6881;*/
 		color: white;
-		font-family: 'Annie Use Your Telescope', cursive;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		/*font-weight: 200;*/
 		/*font-family: 'Sue Ellen Francisco', cursive;*/
-		font-size: 100px;
+		font-size: 95px;
 		text-align: center;
-		padding: 0px;
-		margin: 0px;
-		border: 1px white solid;
-		text-shadow: 4px 4px black;
+		border: 2px white solid;
+		/*text-shadow: 3px 3px black;*/
+		/*-webkit-text-stroke: 2px black;*/
+		margin-top: 30%;
 	}
 
 }
