@@ -1,7 +1,11 @@
 #user-edit-body {
 	color: white;
-	background-color: #F75A9E;
-	text-align: center;
+	background-color: #0CB3FB;
+	/*text-align: center;*/
+}
+
+#user-edit-wrapper {
+	padding: 15px;
 }
 
 #edit-head {
@@ -10,14 +14,28 @@
 	font-size: 30px;
 	padding: 0;
 	margin: 0;
+	padding: 10px 0px 5px 7px;
 }
 
+#edit-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*padding-left: 12px;*/
+}
 
 .input-box {
-	width: 200px;
+	color: white;
+	font-size: 15px;
+	width: 100%;
 	border: none;
 	background: none;
 	border-bottom: 1px solid white;
 	outline: none;
-	margin-top: 20px,;
+	margin-top: 45px,;
+}
+
+.input-box::-webkit-input-placeholder {
+	color: #E9E9E9;
+	font-size: 15px;
 }

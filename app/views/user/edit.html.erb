@@ -1,41 +1,53 @@
 <body id='user-edit-body'>
 
+<div id="user-edit-wrapper">
 	<% if current_user.address1 == nil %>
 		
 		<p id="edit-head">Awesome! Now, let's get you setup.</p>
+		<p>Below, please select a username and provide us with an address within your neighborhood.</p>
 
 	<% else %>
 		
-		<h1>UPDATE YOUR ACCOUNT</h1>
+		<h1>Need to make a change?</h1>
 
 	<% end %>
 
-	<%= form_for @user, url: {action: 'update'} do |f| %>
-		<%= f.label :Username %>:
-		<%= f.text_field :name, :class => "input-box" %>
-		<br>
-		<%= f.label :Address %>:
-		<%= f.text_field :address1, :class => "input-box" %>
-		<br>
-		<%= f.label :City %>:
-		<%= f.text_field :city, :class => "input-box" %>
-		<br>
-		<%= f.label :State %>:
-		<%= f.text_field :state, :class => "input-box" %>
-		<br>
-		<%= f.label :zip %>:
-		<%= f.text_field :zip, :class => "input-box" %>
-		<br>
-		<% if current_user.address1 == nil %>
+	<%= form_for @user, :id => "edit-form", url: {action: 'update'} do |f| %>
 
-			<%= f.submit "Create Account" %>
+		<ul id="edit-list">
 
-		<% else %>
-		
-			<%= f.submit "Save Changes" %>
+			<li>
+			<%= f.text_field :name, :class => "input-box", :placeholder => "*USERNAME" %>
+			</li>
+
+			<li>
+			<%= f.text_field :address1, :class => "input-box", :placeholder => "*STREET" %>
+			</li>
+
+			<li>
+			<%= f.text_field :city, :class => "input-box", :placeholder => "*CITY" %>
+			</li>
+
+			<li>
+			<%= f.text_field :state, :class => "input-box", :placeholder => "*STATE/PROVINCE" %>
+			</li>
+
+			<li>
+			<%= f.text_field :zip, :class => "input-box", :placeholder => "*ZIP CODE" %>
+			</li>
+
+		</ul>
+			<% if current_user.address1 == nil %>
+
+				<%= f.submit "Create Account" %>
+
+			<% else %>
+			
+				<%= f.submit "Save Changes" %>
 
 		<% end %>
 
 	<% end %>
+</div>
 
 </body>
