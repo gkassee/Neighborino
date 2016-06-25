@@ -1,3 +1,5 @@
+@media all and (min-width: 319px) and (max-width: 416px) {
+
 #user-edit-body {
 	color: white;
 	background-color: #0CB3FB;
@@ -31,7 +33,7 @@
 	border: none;
 	background: none;
 	border-bottom: 1px solid white;
-	border-radius: none;
+	border-radius: 0;
 	outline: none;
 	margin-top: 45px,;
 }
@@ -39,4 +41,6 @@
 .input-box::-webkit-input-placeholder {
 	color: #E9E9E9;
 	font-size: 15px;
+}
+
 }
