@@ -3,7 +3,313 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-@media all and (min-width: 319px) and (max-width: 416px) {
+/*iPhone 5 - Vertical*/
+@media all and (min-width: 319px) and (max-width: 321px) {
+
+	body {
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	#sign-in-body {
+		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
+		background-size: 1000px;
+		background-position: 53% 10%;
+	}
+
+	.signin-logo {
+		font-size: 73px;
+		color: white;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-weight: 700;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		text-shadow: 1px 1px #515152,
+								 2px 2px #515152,
+								 3px 3px #515152,
+								 4px 4px #515152,
+								 5px 5px #515152,
+								 6px 6px #515152,
+								 7px 7px #515152,
+								 8px 8px #515152,
+								 9px 9px #515152,
+								 10px 10px #515152,
+								 11px 11px #515152,
+								 12px 12px #515152;
+		margin-top: 30%;
+		margin-bottom: 20%;
+	}
+
+	#twitter-login {
+		font-size: 12px;
+		border-radius: 7px;
+		/*border: 4px #1A5276 solid;*/
+		text-decoration: none;
+		background: #515152;
+		color: white;
+		padding: 10px 30px 10px 30px;
+		margin-left: 77px;
+		/*border-bottom: 2px solid #39B65B;*/
+		opacity: 0.83;
+	}
+
+	#twitter-login:hover {
+		border-radius: 7px;
+		/*border: 4px white solid;*/
+		text-decoration: none;
+		background: #0CB3FB;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 77px;
+		opacity: 1;
+	}
+
+	#modal {
+		z-index: -1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;	
+		background-color: white;
+		opacity: 0.3;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 - Horizontal*/
+@media all and (min-width: 567px) and (max-width: 569px) {
+
+	body {
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	#sign-in-body {
+		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
+		background-size: 1000px;
+		background-position: 53% 10%;
+	}
+
+	.signin-logo {
+		font-size: 110px;
+		color: white;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-weight: 700;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		text-shadow: 1px 1px #515152,
+								 2px 2px #515152,
+								 3px 3px #515152,
+								 4px 4px #515152,
+								 5px 5px #515152,
+								 6px 6px #515152,
+								 7px 7px #515152,
+								 8px 8px #515152,
+								 9px 9px #515152,
+								 10px 10px #515152,
+								 11px 11px #515152,
+								 12px 12px #515152;
+		margin-top: 7%;
+		margin-bottom: 10%;
+	}
+
+	#twitter-login {
+		border-radius: 7px;
+		text-decoration: none;
+		background: #515152;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 30%;
+		opacity: 0.83;
+	}
+
+	#twitter-login:hover {
+		border-radius: 7px;
+		/*border: 4px white solid;*/
+		text-decoration: none;
+		background: #0CB3FB;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 77px;
+		opacity: 1;
+	}
+
+	#modal {
+		z-index: -1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;	
+		background-color: white;
+		opacity: 0.3;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 - Vertical*/
+@media all and (min-width: 374px) and (max-width: 376px) {
+
+	body {
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	#sign-in-body {
+		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
+		background-size: 1000px;
+		background-position: 53% 10%;
+	}
+
+	.signin-logo {
+		font-size: 87px;
+		color: white;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-weight: 700;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		text-shadow: 1px 1px #515152,
+								 2px 2px #515152,
+								 3px 3px #515152,
+								 4px 4px #515152,
+								 5px 5px #515152,
+								 6px 6px #515152,
+								 7px 7px #515152,
+								 8px 8px #515152,
+								 9px 9px #515152,
+								 10px 10px #515152,
+								 11px 11px #515152,
+								 12px 12px #515152;
+		margin-top: 30%;
+		margin-bottom: 20%;
+	}
+
+	#twitter-login {
+		border-radius: 7px;
+		/*border: 4px #1A5276 solid;*/
+		text-decoration: none;
+		background: #515152;
+		color: white;
+		padding: 15px 40px 15px 40px;
+		margin-left: 73px;
+		/*border-bottom: 2px solid #39B65B;*/
+		opacity: 0.83;
+	}
+
+	#twitter-login:hover {
+		border-radius: 7px;
+		/*border: 4px white solid;*/
+		text-decoration: none;
+		background: #0CB3FB;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 77px;
+		opacity: 1;
+	}
+
+	#modal {
+		z-index: -1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;	
+		background-color: white;
+		opacity: 0.3;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 - Horizontal*/
+@media all and (min-width: 665px) and (max-width: 667px) {
+
+	body {
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	#sign-in-body {
+		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
+		background-size: 1000px;
+		background-position: 53% 10%;
+	}
+
+	.signin-logo {
+		font-size: 120px;
+		color: white;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-weight: 700;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		text-shadow: 1px 1px #515152,
+								 2px 2px #515152,
+								 3px 3px #515152,
+								 4px 4px #515152,
+								 5px 5px #515152,
+								 6px 6px #515152,
+								 7px 7px #515152,
+								 8px 8px #515152,
+								 9px 9px #515152,
+								 10px 10px #515152,
+								 11px 11px #515152,
+								 12px 12px #515152;
+		margin-top: 7%;
+		margin-bottom: 10%;
+	}
+
+	#twitter-login {
+		border-radius: 7px;
+		text-decoration: none;
+		background: #515152;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 33%;
+		opacity: 0.83;
+	}
+
+	#twitter-login:hover {
+		border-radius: 7px;
+		/*border: 4px white solid;*/
+		text-decoration: none;
+		background: #0CB3FB;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 77px;
+		opacity: 1;
+	}
+
+	#modal {
+		z-index: -1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;	
+		background-color: white;
+		opacity: 0.3;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 Plus - Vertical*/
+@media all and (min-width: 413px) and (max-width: 416px) {
 
 	body {
 		font-family: 'Noto Sans', sans-serif;
@@ -48,6 +354,81 @@
 		padding: 15px 50px 15px 50px;
 		margin-left: 80px;
 		/*border-bottom: 2px solid #39B65B;*/
+		opacity: 0.83;
+	}
+
+	#twitter-login:hover {
+		border-radius: 7px;
+		/*border: 4px white solid;*/
+		text-decoration: none;
+		background: #0CB3FB;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 77px;
+		opacity: 1;
+	}
+
+	#modal {
+		z-index: -1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;	
+		background-color: white;
+		opacity: 0.3;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 Plus - Horizontal*/
+@media all and (min-width: 735px) and (max-width: 736px) {
+
+	body {
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	#sign-in-body {
+		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
+		background-size: 1000px;
+		background-position: 53% 10%;
+	}
+
+	.signin-logo {
+		font-size: 120px;
+		color: white;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-weight: 700;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		text-shadow: 1px 1px #515152,
+								 2px 2px #515152,
+								 3px 3px #515152,
+								 4px 4px #515152,
+								 5px 5px #515152,
+								 6px 6px #515152,
+								 7px 7px #515152,
+								 8px 8px #515152,
+								 9px 9px #515152,
+								 10px 10px #515152,
+								 11px 11px #515152,
+								 12px 12px #515152;
+		margin-top: 7%;
+		margin-bottom: 10%;
+	}
+
+	#twitter-login {
+		border-radius: 7px;
+		text-decoration: none;
+		background: #515152;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 35%;
 		opacity: 0.83;
 	}
 
