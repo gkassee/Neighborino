@@ -6,24 +6,59 @@
 @media all and (min-width: 319px) /*and (max-width: 416px)*/ {
 
 	body {
-		background-image: url("http://66.media.tumblr.com/50203958ffd31694db2605632e9630a4/tumblr_ne5v9izDsp1tnemwao1_1280.jpg");
-		background-size: 1400px;
-		background-position: 53% 40%;
+		font-family: 'Noto Sans', sans-serif;
+	}
+
+	#sign-in-body {
+		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
+		background-size: 1000px;
+		background-position: 53% 10%;
 	}
 
 	.signin-logo {
-		background-color: black;
-		/*color: #FF6881;*/
-		color: white;
+		font-size: 97px;
+		color: #61C7F3;
 		font-family: 'Yanone Kaffeesatz', sans-serif;
-		/*font-weight: 200;*/
-		/*font-family: 'Sue Ellen Francisco', cursive;*/
-		font-size: 95px;
+		font-weight: 700;
+		padding: 0;
+		margin: 0;
 		text-align: center;
-		border: 2px white solid;
-		/*text-shadow: 3px 3px black;*/
+		/*border: 2px white solid;*/
+		text-shadow: 4px 4px #1A5276;
 		/*-webkit-text-stroke: 2px black;*/
 		margin-top: 30%;
+		margin-bottom: 20%;
+	}
+
+	#twitter-login {
+		border-radius: 15px;
+		/*border: 4px #1A5276 solid;*/
+		text-decoration: none;
+		background: #1A5276;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 77px;
+	}
+
+	#twitter-login:hover {
+		border-radius: 15px;
+		/*border: 4px white solid;*/
+		text-decoration: none;
+		background: #39B65B;
+		color: white;
+		padding: 15px 50px 15px 50px;
+		margin-left: 77px;
+	}
+
+	#modal {
+		z-index: -1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;	
+		background-color: white;
+		opacity: 0.2;
 	}
 
 }

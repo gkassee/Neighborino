@@ -1,7 +1,6 @@
-<p class="signin-logo">NEIGHBORINO</p>
-
-
 <% if current_user %>
+
+	<p>NEIGHBORINO</p>
 
 		<p>Signed In As: <h1><%= link_to current_user.name, user_path(@user) %></h1>
 
@@ -23,6 +22,13 @@
 
 <% else %>
 
-		<%= link_to "Twitter Login", "auth/twitter" %>
+	<body id="sign-in-body">
+
+		<div id="modal">
+  	</div>
+
+		<p class="signin-logo">NEIGHBORINO</p>
+		<%= link_to "LOGIN / SIGN-UP", "auth/twitter",  :id => "twitter-login" %>
+	</body>
 
 <% end %>
