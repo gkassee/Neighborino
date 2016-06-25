@@ -17,37 +17,50 @@
 
 	.signin-logo {
 		font-size: 97px;
-		color: #61C7F3;
+		color: white;
 		font-family: 'Yanone Kaffeesatz', sans-serif;
 		font-weight: 700;
 		padding: 0;
 		margin: 0;
 		text-align: center;
-		/*border: 2px white solid;*/
-		text-shadow: 4px 4px #1A5276;
-		/*-webkit-text-stroke: 2px black;*/
+		/*-webkit-text-stroke: 3px #61C7F3;*/
+		text-shadow: 1px 1px #515152,
+								 2px 2px #515152,
+								 3px 3px #515152,
+								 4px 4px #515152,
+								 5px 5px #515152,
+								 6px 6px #515152,
+								 7px 7px #515152,
+								 8px 8px #515152,
+								 9px 9px #515152,
+								 10px 10px #515152,
+								 11px 11px #515152,
+								 12px 12px #515152;
 		margin-top: 30%;
 		margin-bottom: 20%;
 	}
 
 	#twitter-login {
-		border-radius: 15px;
+		border-radius: 7px;
 		/*border: 4px #1A5276 solid;*/
 		text-decoration: none;
-		background: #1A5276;
+		background: #515152;
 		color: white;
 		padding: 15px 50px 15px 50px;
 		margin-left: 77px;
+		/*border-bottom: 2px solid #39B65B;*/
+		opacity: 0.85;
 	}
 
 	#twitter-login:hover {
-		border-radius: 15px;
+		border-radius: 7px;
 		/*border: 4px white solid;*/
 		text-decoration: none;
-		background: #39B65B;
+		background: #0CB3FB;
 		color: white;
 		padding: 15px 50px 15px 50px;
 		margin-left: 77px;
+		opacity: 1;
 	}
 
 	#modal {
@@ -58,7 +71,7 @@
 		width: 100%;
 		height: 100%;	
 		background-color: white;
-		opacity: 0.2;
+		opacity: 0.3;
 	}
 
 }

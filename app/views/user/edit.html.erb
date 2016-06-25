@@ -1,21 +1,41 @@
-<h1>User#edit</h1>
-<p>Find me in app/views/user/edit.html.erb</p>
+<body id='user-edit-body'>
 
-<%= form_for @user, url: {action: 'update'} do |f| %>
-	<%= f.label :Username %>
-	<%= f.text_field :name %>
-	<br>
-	<%= f.label :Address %>
-	<%= f.text_field :address1 %>
-	<br>
-	<%= f.label :City %>
-	<%= f.text_field :city %>
-	<br>
-	<%= f.label :State %>
-	<%= f.text_field :state %>
-	<br>
-	<%= f.label :zip %>
-	<%= f.text_field :zip %>
-	<br>
-	<%= f.submit "Save Changes" %>
-<% end %>
+	<% if current_user.address1 == nil %>
+		
+		<p id="edit-head">Awesome! Now, let's get you setup.</p>
+
+	<% else %>
+		
+		<h1>UPDATE YOUR ACCOUNT</h1>
+
+	<% end %>
+
+	<%= form_for @user, url: {action: 'update'} do |f| %>
+		<%= f.label :Username %>:
+		<%= f.text_field :name, :class => "input-box" %>
+		<br>
+		<%= f.label :Address %>:
+		<%= f.text_field :address1, :class => "input-box" %>
+		<br>
+		<%= f.label :City %>:
+		<%= f.text_field :city, :class => "input-box" %>
+		<br>
+		<%= f.label :State %>:
+		<%= f.text_field :state, :class => "input-box" %>
+		<br>
+		<%= f.label :zip %>:
+		<%= f.text_field :zip, :class => "input-box" %>
+		<br>
+		<% if current_user.address1 == nil %>
+
+			<%= f.submit "Create Account" %>
+
+		<% else %>
+		
+			<%= f.submit "Save Changes" %>
+
+		<% end %>
+
+	<% end %>
+
+</body>
