@@ -56,6 +56,9 @@
 		border-radius: 7px;
 		padding: 8px;
 		color: white;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 
 }
@@ -123,6 +126,9 @@
 		padding: 10px;
 		color: white;
 		margin-left: 23%;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 
 }
@@ -189,6 +195,9 @@
 		border-radius: 7px;
 		padding: 10px;
 		color: white;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 	}
 
 }
@@ -248,6 +257,9 @@
 	}
 
 	.edit-submitter {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 		font-size: 16px;
 		border: none;
 		background-color: #515152;
@@ -314,6 +326,9 @@
 	}
 
 	.edit-submitter {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
 		font-size: 15px;
 		border: none;
 		background-color: #515152;
@@ -368,7 +383,7 @@
 		border-bottom: 1px solid white;
 		border-radius: 0;
 		outline: none;
-		margin-top: 45px;
+		margin-bottom: 35px;
 	}
 
 	.input-box::-webkit-input-placeholder {
@@ -385,7 +400,7 @@
 		background-color: #515152;
 		width: 170px;
 		margin-left: 27%;
-		margin-top: 10%;
+		margin-top: 5px;
 		border-radius: 7px;
 		padding: 13px;
 		color: white;
