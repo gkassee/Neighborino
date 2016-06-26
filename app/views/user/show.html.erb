@@ -1,4 +1,6 @@
 <h1><%= @user.name %>'s Questions:</h1>
+<img	id="profile-pic" src=<%= @user.profile_pic%>>
+<%= @user.bio %>
 
 <% if current_user %>
 	<%= form_for @question do |f| %>
