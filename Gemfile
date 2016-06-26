@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'geo-distance'
+gem 'gmaps4rails'
 
 gem 'geocoder'
 # Should allow login with Twitter...
