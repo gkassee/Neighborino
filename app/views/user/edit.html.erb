@@ -3,8 +3,9 @@
 <div id="user-edit-wrapper">
 	<% if current_user.address1 == nil %>
 		
-		<p id="edit-head">Awesome! Now, let's get you setup.</p>
-		<p>Below, please select a username and provide us with an address within your neighborhood.</p>
+		<p class="edit-head">Awesome!</p>
+		<p class="edit-head">Now, let's get you setup.</p>
+		<p id="edit-instructions">Below, let us know where you live and what we should call you. Don't worry, you can update these details at any time.</p>
 
 	<% else %>
 		
@@ -39,11 +40,11 @@
 		</ul>
 			<% if current_user.address1 == nil %>
 
-				<%= f.submit "Create Account" %>
+				<%= f.submit "CREATE ACCOUNT", :class => "edit-submitter" %>
 
 			<% else %>
 			
-				<%= f.submit "Save Changes" %>
+				<%= f.submit "SAVE", :class => "edit-submitter" %>
 
 		<% end %>
 

@@ -1,21 +1,355 @@
-@media all and (min-width: 319px) and (max-width: 416px) {
+/*iPhone 5 - Horizontal*/
+@media all and (min-width: 567px) and (max-width: 569px) {
 
 	#user-edit-body {
 		color: white;
 		background-color: #0CB3FB;
+		padding-top: 10px;
 	}
 
 	#user-edit-wrapper {
-		padding: 15px 10px 0px 35px;
+		width: 90%;
+		margin: 0 auto;
 	}
 
-	#edit-head {
+	.edit-head {
 		line-height: 1;
 		font-weight: bold;
-		font-size: 30px;
+		font-size: 20px;
 		padding: 0;
 		margin: 0;
-		padding: 10px 0px 5px 7px;
+	}
+
+	#edit-instructions {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+
+	#edit-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.input-box {
+		color: white;
+		font-size: 10px;
+		width: 100%;
+		border: none;
+		background: none;
+		border-bottom: 1px solid white;
+		border-radius: 0;
+		outline: none;
+		margin-bottom: 12px;
+	}
+
+	.input-box::-webkit-input-placeholder {
+		color: #E9E9E9;
+		font-size: 10px;
+	}
+
+	.edit-submitter {
+		font-size: 10px;
+		border: none;
+		background-color: #515152;
+		width: 110px;
+		border-radius: 7px;
+		padding: 8px;
+		color: white;
+	}
+
+}
+
+
+
+
+
+/*iPhone 5 - Vertical*/
+@media all and (min-width: 319px) and (max-width: 321px) {
+
+	#user-edit-body {
+		color: white;
+		background-color: #0CB3FB;
+		padding-top: 10px;
+	}
+
+	#user-edit-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.edit-head {
+		line-height: 1;
+		font-weight: bold;
+		font-size: 22px;
+		padding: 0;
+		margin: 0;
+	}
+
+	#edit-instructions {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+
+	#edit-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.input-box {
+		color: white;
+		font-size: 13px;
+		width: 100%;
+		border: none;
+		background: none;
+		border-bottom: 1px solid white;
+		border-radius: 0;
+		outline: none;
+		margin-bottom: 30px;
+	}
+
+	.input-box::-webkit-input-placeholder {
+		color: #E9E9E9;
+		font-size: 13px;
+	}
+
+	.edit-submitter {
+		font-size: 13px;
+		border: none;
+		background-color: #515152;
+		width: 150px;
+		border-radius: 7px;
+		padding: 10px;
+		color: white;
+		margin-left: 23%;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 - Horizontal*/
+@media all and (min-width: 665px) and (max-width: 668px) {
+
+	#user-edit-body {
+		color: white;
+		background-color: #0CB3FB;
+		padding-top: 10px;
+	}
+
+	#user-edit-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.edit-head {
+		line-height: 1;
+		font-weight: bold;
+		font-size: 20px;
+		padding: 0;
+		margin: 0;
+	}
+
+	#edit-instructions {
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+
+	#edit-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.input-box {
+		color: white;
+		font-size: 12px;
+		width: 100%;
+		border: none;
+		background: none;
+		border-bottom: 1px solid white;
+		border-radius: 0;
+		outline: none;
+		margin-bottom: 20px;
+	}
+
+	.input-box::-webkit-input-placeholder {
+		color: #E9E9E9;
+		font-size: 12px;
+	}
+
+	.edit-submitter {
+		font-size: 12px;
+		border: none;
+		background-color: #515152;
+		width: 140px;
+		border-radius: 7px;
+		padding: 10px;
+		color: white;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 - Vertical*/
+@media all and (min-width: 374px) and (max-width: 376px) {
+
+	#user-edit-body {
+		color: white;
+		background-color: #0CB3FB;
+		padding-top: 10px;
+	}
+
+	#user-edit-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.edit-head {
+		line-height: 1;
+		font-weight: bold;
+		font-size: 25px;
+		padding: 0;
+		margin: 0;
+	}
+
+	#edit-instructions {
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+
+	#edit-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.input-box {
+		color: white;
+		font-size: 16px;
+		width: 100%;
+		border: none;
+		background: none;
+		border-bottom: 1px solid white;
+		border-radius: 0;
+		outline: none;
+		margin-bottom: 35px;
+	}
+
+	.input-box::-webkit-input-placeholder {
+		color: #E9E9E9;
+		font-size: 16px;
+	}
+
+	.edit-submitter {
+		font-size: 16px;
+		border: none;
+		background-color: #515152;
+		width: 180px;
+		border-radius: 7px;
+		padding: 15px;
+		color: white;
+		margin-left: 23%;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 Plus - Horizontal*/
+@media all and (min-width: 735px) and (max-width: 737px) {
+
+	#user-edit-body {
+		color: white;
+		background-color: #0CB3FB;
+		padding-top: 10px;
+	}
+
+	#user-edit-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.edit-head {
+		line-height: 1;
+		font-weight: bold;
+		font-size: 25px;
+		padding: 0;
+		margin: 0;
+	}
+
+	#edit-instructions {
+		margin-bottom: 20px;
+	}
+
+	#edit-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.input-box {
+		color: white;
+		font-size: 13px;
+		width: 100%;
+		border: none;
+		background: none;
+		border-bottom: 1px solid white;
+		border-radius: 0;
+		outline: none;
+		margin-bottom: 20px;
+	}
+
+	.input-box::-webkit-input-placeholder {
+		color: #E9E9E9;
+		font-size: 13px;
+	}
+
+	.edit-submitter {
+		font-size: 15px;
+		border: none;
+		background-color: #515152;
+		width: 155px;
+		border-radius: 7px;
+		padding: 10px;
+		color: white;
+	}
+
+}
+
+
+
+
+
+/*iPhone 6 Plus - Vertical*/
+@media all and (min-width: 413px) and (max-width: 415px) {
+
+	#user-edit-body {
+		color: white;
+		background-color: #0CB3FB;
+		padding-top: 20px;
+	}
+
+	#user-edit-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.edit-head {
+		line-height: 1;
+		font-weight: bold;
+		font-size: 28px;
+		padding: 0;
+		margin: 0;
+		/*padding: 10px 0px 5px 7px;*/
 	}
 
 	#edit-list {
@@ -34,12 +368,24 @@
 		border-bottom: 1px solid white;
 		border-radius: 0;
 		outline: none;
-		margin-top: 45px,;
+		margin-top: 45px;
 	}
 
 	.input-box::-webkit-input-placeholder {
 		color: #E9E9E9;
 		font-size: 15px;
+	}
+
+	.edit-submitter {
+		font-size: 15px;
+		border: none;
+		background-color: #515152;
+		width: 170px;
+		margin-left: 28%;
+		margin-top: 10%;
+		border-radius: 7px;
+		padding: 13px;
+		color: white;
 	}
 
 }
