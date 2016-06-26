@@ -22,8 +22,14 @@
               lng: position.coords.longitude
             };
 
-            document.write(pos.lat);
-            document.write(pos.lng);
+            // console.log(pos.lat);
+            // console.log(pos.lng);
+
+            document.getElementById("lat").innerHTML = pos.lat;
+            document.getElementById("lng").innerHTML = pos.lng;
+
+
+
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
@@ -51,7 +57,7 @@
 <% if current_user %>
 	<%= form_for @question do |f| %>
 			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<%= f.hidden_field :address, :value => request.remote_ip %>
+			<%= f.hidden_field :address, :value => <span id='lat'></span>, <span id='lng'></span> %>
 			<%= f.label :Question %>
 			<br>
 			<%= f.text_area :body %>
