@@ -3,8 +3,25 @@
 <%= @user.bio %>
 
 
+
+<% if current_user %>
+	<%= form_for @question do |f| %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :address, :value => request.remote_ip %>
+			<%= f.label :Question %>
+			<br>
+			<%= f.text_area :body %>
+			<br>
+			<%= f.submit "Submit Question" %>
+	<% end %>
+<% end %>
+
+
+
+
+
 <div id="map"></div>
-    <script>
+<script>
       // Note: This will not work unless the page URL begins with "https://"
 
       function initMap() {
@@ -22,11 +39,12 @@
               lng: position.coords.longitude
             };
 
-            // console.log(pos.lat);
+          // console.log(pos.lat);
             // console.log(pos.lng);
 
             document.getElementById("lat").innerHTML = pos.lat;
             document.getElementById("lng").innerHTML = pos.lng;
+
 
 
 
@@ -54,17 +72,7 @@
 
 
 
-<% if current_user %>
-	<%= form_for @question do |f| %>
-			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<%= f.hidden_field :address, :value => <span id='lat'></span>, <span id='lng'></span> %>
-			<%= f.label :Question %>
-			<br>
-			<%= f.text_area :body %>
-			<br>
-			<%= f.submit "Submit Question" %>
-	<% end %>
-<% end %>
+
 
 <% @user.questions.each do |q| %>
 	<%= link_to q.body, question_path(q.id) %>
