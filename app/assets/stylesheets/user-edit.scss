@@ -1,3 +1,131 @@
+#user-edit-body {
+		color: white;
+		background-color: #0CB3FB;
+		padding-top: 10px;
+	}
+
+	#edit-header {
+	border-bottom: grey 0.5px solid;
+	width: 100%;
+	height: 80px;
+	z-index: -1;
+	min-width: 1150px;
+	margin: 0;
+	padding: 0;
+	background-color: #2F3233;
+	border-radius: 5px;
+	top: 0;
+}
+
+#site-logo {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 3em;
+	float: left;
+	width: 400px;
+	margin: 10px 20px 20px 30px;
+	text-shadow: 1px 1px #0CB3FB,
+							 2px 2px #0CB3FB,
+							 3px 3px #0CB3FB,
+							 4px 4px #0CB3FB;
+	color: white;
+	text-decoration: none;
+}
+
+#user-name-head {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	float: right;
+	margin-top: 45px;
+}
+
+li {
+	display: inline;
+	z-index: 1;
+	padding-right: 30px;
+	font-weight: 500;
+}
+
+
+li a {
+	text-decoration: none;
+	color: white;
+	font-size: .82em;
+}
+
+li a:hover {
+	color: #0CB3FB;
+}
+
+	#user-edit-wrapper {
+		width: 600px;
+		margin: 0 auto;
+		margin-top: 80px;
+		/*border: 1px white dashed;*/
+	}
+
+	.edit-head {
+		line-height: 1;
+		font-weight: bold;
+		font-size: 40px;
+		padding: 0;
+		margin: 0;
+	}
+
+	#edit-instructions {
+		margin-bottom: 35px;
+		font-size: 25px;
+	}
+
+	#edit-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.input-box {
+		color: white;
+		font-size: 17px;
+		width: 100%;
+		border: none;
+		background: none;
+		border-bottom: 1px solid white;
+		border-radius: 0;
+		outline: none;
+		margin-bottom: 30px;
+	}
+
+	.input-box::-webkit-input-placeholder {
+		color: #E9E9E9;
+		font-size: 17px;
+	}
+
+	.edit-submitter {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		font-size: 15px;
+		border: none;
+		background-color: #515152;
+		width: 155px;
+		border-radius: 7px;
+		padding: 10px;
+		color: white;
+		margin-top: 30px;
+	}
+
+
+
+
+
+
+
+
+
+
+
 /*iPhone 5 - Horizontal*/
 @media all and (min-width: 567px) and (max-width: 569px) {
 
