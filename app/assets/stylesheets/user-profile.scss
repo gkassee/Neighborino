@@ -1,0 +1,40 @@
+#user-bar {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-bottom: grey 0.5px solid;
+	display: inline-block;
+	/*background: white;*/
+}
+
+#question-box {
+	resize: none;
+	border: none;
+	width: 500px;
+	height: 50px;
+	border-radius: 5px;
+}
+
+#profile-pic {
+	float: left;
+	width: 150px;
+	border-radius: 100%;
+	border: 2px grey solid;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+#user-info {
+	float: left;
+	margin-left: 30px;
+}
+
+#user-name-head {
+	font-weight: 100;
+	font-size: 55px;
+	padding-top: 40px;
+}
+
+#user-location {
+	top: 130px;
+}

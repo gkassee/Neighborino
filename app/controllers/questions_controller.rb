@@ -23,7 +23,7 @@ class QuestionsController < ApplicationController
   def show
   	@question = Question.find(params[:id])
     @comment = Comment.new
-    @user = User.near("#{@question.latitude}, #{@question.longitude}", 3)
+    @user = User.near("#{@question.latitude}, #{@question.longitude}", 1)
   end
 
 

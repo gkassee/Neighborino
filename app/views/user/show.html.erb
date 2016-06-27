@@ -1,5 +1,53 @@
-<head>
-	<script>
+<div class="wrapper">
+
+<header>
+	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
+		<ul>
+				<li><%=link_to "MY PROFILE", user_path(current_user.id)%> </li>
+				<li><%= link_to('LOG OUT', sign_out_path, :method => :delete) %></li>
+		</ul>
+</header>
+
+
+
+<div id="user-bar">
+	<img	id="profile-pic" src=<%= @user.profile_pic%> >
+
+	<div id="user-info">
+		<p id="user-name-head"><%= @user.name %></p>
+		<!-- <p id="user-bio"><%= @user.bio %></p> -->
+		<p id="user-location"><%= @user.city %>, <%= @user.state %></p>
+	</div>
+</div>
+
+
+<% if current_user.id == @user.id %>
+	<%= form_for @question do |f| %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :address, :value => request.remote_ip %>
+
+			<%= f.label :Latitude %>
+			<br>
+			<%= f.text_field :latitude, :id => "lat", :value => "blue" %>
+			<br>
+			<%= f.label :Longitude %>
+			<br>
+			<%= f.text_field :longitude, :id => "lng", :value => "cheese" %>
+			<br>
+			<%= f.label :Question %>
+			<br>
+			<%= f.text_area :body, :id => "question-box", :placeholder => "What's going on?", :maxlength => 200 %>
+			<br>
+			<%= f.submit "Submit Question" %>
+	<% end %>
+<% end %>
+
+
+
+
+
+<div id="map"></div>
+<script>
       // Note: This will not work unless the page URL begins with "https://"
 
       function initMap() {
@@ -47,37 +95,6 @@
       }
 
     </script>
-</head>
-
-
-
-
-<h1><%= @user.name %>'s Questions:</h1>
-<img	id="profile-pic" src=<%= @user.profile_pic%>>
-<%= @user.bio %>
-
-
-
-<% if current_user.id == @user.id %>
-	<%= form_for @question do |f| %>
-			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<%= f.hidden_field :address, :value => request.remote_ip %>
-			<%= f.hidden_field :latitude, :id => "lat", :value => "blue" %>
-			<%= f.hidden_field :longitude, :id => "lng", :value => "cheese" %>
-
-			<%= f.label :Question %>
-			<br>
-			<%= f.text_area :body, :id => "porto",  :value => "taco" %>
-			<br>
-			<%= f.submit "Submit Question" %>
-	<% end %>
-<% end %>
-
-
-
-
-
-<div id="map"></div>
 
 
 
@@ -95,4 +112,6 @@
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY6jcNu9RczD-7e3357IyugkCaG_oAW6Q&callback=initMap">
     </script>
+
+</div>
 

@@ -1,13 +1,21 @@
+<div class="wrapper">
+
+<header>
+<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
+	<ul>
+			<li><%=link_to "MY PROFILE", user_path(current_user.id)%> </li>
+			<li><%= link_to('LOG OUT', sign_out_path, :method => :delete) %></li>
+	</ul>
+</header>
+
 <% if current_user %>
 
 	<% if flash[:notice] %>
 			<div class="flash-notice">
 				<%=flash[:notice] %>
 			</div>
+
 	<% end %>
-
-	<p>NEIGHBORINO</p>
-
 
 		<p>Signed In As: <h1><%= link_to current_user.name, user_path(@user) %></h1>
 
@@ -27,6 +35,16 @@
 		<%= button_to "Delete My Account", "user_delete", method: :delete %>
 		<%= button_to "Sign Out", "sign_out", method: :delete %>
 
+
+
+		<% @question.each do |q| %>
+
+			<%= q.body %> - <%= q.user.name %>
+		<% end %>
+
+
+
+
 <% else %>
 
 	<body id="sign-in-body">
@@ -45,3 +63,5 @@
 	</body>
 
 <% end %>
+
+</div>

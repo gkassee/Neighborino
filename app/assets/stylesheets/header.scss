@@ -1,0 +1,51 @@
+header {
+	border-bottom: grey 0.5px solid;
+	width: 100%;
+	height: 80px;
+	z-index: -1;
+	min-width: 1150px;
+	margin: 0;
+	padding: 0;
+}
+
+#site-logo {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 3em;
+	float: left;
+	width: 400px;
+	margin: 10px 20px 20px 30px;
+	text-shadow: 1px 1px #0CB3FB,
+							 2px 2px #0CB3FB,
+							 3px 3px #0CB3FB,
+							 4px 4px #0CB3FB;
+	color: white;
+	text-decoration: none;
+}
+
+#user-name-head {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	float: right;
+	margin-top: 45px;
+}
+
+li {
+	display: inline;
+	z-index: 1;
+	padding-right: 30px;
+	font-weight: 500;
+}
+
+
+li a {
+	text-decoration: none;
+	color: white;
+	font-size: .82em;
+}
+
+li a:hover {
+	color: #0CB3FB;
+}
