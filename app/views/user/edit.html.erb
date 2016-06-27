@@ -1,13 +1,5 @@
 <body id='user-edit-body'>
 
-<header id="edit-header">
-	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
-		<ul>
-				<li><%=link_to current_user.name, user_path(current_user.id)%> </li>
-				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
-		</ul>
-	</header>
-
 
 <div id="user-edit-wrapper">
 	<% if current_user.address1 == nil %>
@@ -17,6 +9,14 @@
 		<p id="edit-instructions">Below, let us know where you live and what we should call you. Don't worry, you can update these details at any time.</p>
 
 	<% else %>
+
+		<header id="edit-header">
+			<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
+			<ul>
+					<li><%=link_to current_user.name, user_path(current_user.id)%> </li>
+					<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
+			</ul>
+		</header>
 		
 		<p class="edit-head">Hey, <%= @user.name %>!</p>
 		<p class="edit-head">Need to make a change?</p>
@@ -51,9 +51,7 @@
 		</ul>
 			<% if current_user.address1 == nil %>
 
-				<%= f.submit "CREATE ACCOUNT", :class => "edit-submitter" %>
-
-				<%= button_to "Delete My Account", "user_delete", :class => "edit-submitter",method: :delete %>
+				<%= f.submit "create account", :class => "edit-submitter" %>
 
 			<% else %>
 			
