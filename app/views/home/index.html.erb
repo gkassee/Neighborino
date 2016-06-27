@@ -36,13 +36,10 @@
 		<%= button_to "Sign Out", "sign_out", method: :delete %>
 
 
-	<% if @question %>
 		<% @question.each do |q| %>
-
-			<%= q.body %> - <%= q.user.name %>
+		<p>Check out what's going on in your neighborhood:</p>
+			<%= q.body %>
 		<% end %>
-	<% end %>
-
 
 
 <% else %>
