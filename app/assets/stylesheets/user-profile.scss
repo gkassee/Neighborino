@@ -20,8 +20,7 @@
 	width: 150px;
 	border-radius: 100%;
 	border: 2px grey solid;
-	margin-top: 20px;
-	margin-bottom: 30px;
+	margin: 20px 0px 30px 60px;
 }
 
 #user-info {
@@ -32,9 +31,34 @@
 #user-name-head {
 	font-weight: 100;
 	font-size: 55px;
-	padding-top: 40px;
+	padding-top: 25px;
 }
 
 #user-location {
 	top: 130px;
+	font-weight: 500 ;
 }
+
+#user-twitter-handle {
+	color: white;
+	text-decoration: none;
+}
+
+#user-twitter-handle:hover {
+	color: yellow;
+}
+
+#map {
+	border: 2px solid grey;
+	border-radius: 7px;
+  height: 150px;
+  float: left;
+  width: 600px;
+  margin-left: 150px;
+  margin-top: 20px;
+}
+
+
+
+
+

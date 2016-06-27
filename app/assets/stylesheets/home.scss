@@ -3,6 +3,105 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
+
+	#sign-in-body {
+		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
+		background-size: 100%;
+		background-position: 53% 10%;
+	}
+
+	#sign-in-wrapper {
+		width: 506px;
+		margin: 0 auto;
+		margin-top: 18%;
+		/*border: 1px white dashed;*/
+	}
+
+	.signin-logo {
+		font-size: 65px;
+		color: white;
+		font-family: 'Alegreya Sans SC', sans-serif;
+		padding: 25px;
+		text-shadow: 1px 1px #0CB3FB,
+								 2px 2px #0CB3FB,
+								 3px 3px #0CB3FB,
+								 4px 4px #0CB3FB,
+								 5px 5px #0CB3FB,
+								 6px 6px #0CB3FB,
+								 7px 7px #0CB3FB;
+		background-color: #2F3233;
+		width: 425px;
+		padding-left: 55px;
+		border-radius: 5px 45px;
+		box-shadow: black 1px 4px 7px;
+
+
+		/*font-size: 120px;
+		color: white;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-weight: 700;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		text-shadow: 1px 1px #515152,
+								 2px 2px #515152,
+								 3px 3px #515152,
+								 4px 4px #515152,
+								 5px 5px #515152,
+								 6px 6px #515152,
+								 7px 7px #515152,
+								 8px 8px #515152,
+								 9px 9px #515152,
+								 10px 10px #515152,
+								 11px 11px #515152,
+								 12px 12px #515152;
+		margin-top: 7%;
+		margin-bottom: 10%;*/
+	}
+
+	#twitter-login {
+		border-radius: 7px;
+		text-decoration: none;
+		background: #0CB3FB;
+		color: white;
+		padding: 10px 20px 10px 20px;
+		margin-left: 175px;
+	}
+
+	#twitter-login:hover {
+		border-radius: 7px;
+		/*border: 4px white solid;*/
+		text-decoration: none;
+		background: green;
+		color: white;
+	}
+
+	#modal {
+		z-index: -1;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*iPhone 5 - Vertical*/
 @media all and (min-width: 319px) and (max-width: 321px) {
 

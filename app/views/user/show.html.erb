@@ -3,8 +3,8 @@
 <header>
 	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
 		<ul>
-				<li><%=link_to "MY PROFILE", user_path(current_user.id)%> </li>
-				<li><%= link_to('LOG OUT', sign_out_path, :method => :delete) %></li>
+				<li><%=link_to current_user.name, user_path(current_user.id)%> </li>
+				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
 		</ul>
 </header>
 
@@ -17,7 +17,9 @@
 		<p id="user-name-head"><%= @user.name %></p>
 		<!-- <p id="user-bio"><%= @user.bio %></p> -->
 		<p id="user-location"><%= @user.city %>, <%= @user.state %></p>
+		<p><%= link_to "@#{current_user.twitter_handle}", "https://twitter.com/#{current_user.twitter_handle}", :id => "user-twitter-handle" %></p>
 	</div>
+  <div id="map"></div>
 </div>
 
 
@@ -28,11 +30,11 @@
 
 			<%= f.label :Latitude %>
 			<br>
-			<%= f.text_field :latitude, :id => "lat", :value => "blue" %>
+			<%= f.text_field :latitude, :id => "lat", :placeholder => "latitude" %>
 			<br>
 			<%= f.label :Longitude %>
 			<br>
-			<%= f.text_field :longitude, :id => "lng", :value => "cheese" %>
+			<%= f.text_field :longitude, :id => "lng", :placeholder => "cheese" %>
 			<br>
 			<%= f.label :Question %>
 			<br>
@@ -46,7 +48,6 @@
 
 
 
-<div id="map"></div>
 <script>
       // Note: This will not work unless the page URL begins with "https://"
 
@@ -106,8 +107,6 @@
 <% end %>
 
 <br>
-
-<%= link_to "HOME", root_path %>
 
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY6jcNu9RczD-7e3357IyugkCaG_oAW6Q&callback=initMap">
