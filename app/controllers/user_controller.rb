@@ -17,7 +17,7 @@ class UserController < ApplicationController
     @user = current_user
     @user.update(user_params)
     @user.save
-    redirect_to root_path
+    redirect_to user_path(current_user.id)
   end
 
   def delete
