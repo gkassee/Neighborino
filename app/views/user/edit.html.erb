@@ -56,9 +56,13 @@
 
 				<%= f.submit "CREATE ACCOUNT", :class => "edit-submitter" %>
 
+				<%= button_to "Delete My Account", "user_delete", method: :delete %>
+
 			<% else %>
 			
-				<%= f.submit "SAVE", :class => "edit-submitter" %>
+				<%= f.submit "save", :class => "edit-submitter" %>
+				<br>
+				<%= button_to "delete my account", "user_delete", :class => "edit-submitter", method: :delete %>
 
 		<% end %>
 

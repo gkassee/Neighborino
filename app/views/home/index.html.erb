@@ -17,25 +17,8 @@
 
 	<% end %>
 
-
-
-		<br>
-		Twitter Handle: <%= current_user.twitter_handle %>
-		<br>
-
-
-
-		City: <h3>
-		<%= current_user.address1 %>
-		<%= current_user.city %>, <%= current_user.state %>, <%= current_user.zip %></h3>
-		</p>
-		<%= button_to "Edit My Account", edit_user_path(@user), method: :get %>
-		<%= button_to "Delete My Account", "user_delete", method: :delete %>
-		<%= button_to "Sign Out", "sign_out", method: :delete %>
-
-
+	<p>Check out what's going on in your neighborhood:</p>
 		<% @question.each do |q| %>
-		<p>Check out what's going on in your neighborhood:</p>
 			<%= q.body %>
 		<% end %>
 
