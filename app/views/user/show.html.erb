@@ -1,7 +1,7 @@
 <div class="wrapper">
 
 <header>
-	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
+	<%= link_to "NEIGHBORINO", user_path(current_user.id), :id => "site-logo" %>
 		<ul>
         <% if current_user.id == @user.id %>
   				<li><%=link_to 'edit my profile', edit_user_path(@user) %> </li>
@@ -11,46 +11,6 @@
 				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
 		</ul>
 </header>
-
-
-
-<div id="user-bar">
-	<img	id="profile-pic" src=<%= @user.profile_pic%> >
-
-	<div id="user-info">
-		<p id="user-name-head"><%= @user.name %></p>
-		<!-- <p id="user-bio"><%= @user.bio %></p> -->
-		<p id="user-location"><%= @user.city %>, <%= @user.state %></p>
-		<p><%= link_to "@#{current_user.twitter_handle}", "https://twitter.com/#{current_user.twitter_handle}", :id => "user-twitter-handle" %></p>
-	</div>
-  <div id="map"></div>
-</div>
-
-
-<% if current_user.id == @user.id %>
-	<%= form_for @question do |f| %>
-			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<%= f.hidden_field :address, :value => request.remote_ip %>
-
-			<%= f.label :Latitude %>
-			<br>
-			<%= f.text_field :latitude, :id => "lat", :placeholder => "latitude" %>
-			<br>
-			<%= f.label :Longitude %>
-			<br>
-			<%= f.text_field :longitude, :id => "lng", :placeholder => "longitude" %>
-			<br>
-			<%= f.label :Question %>
-			<br>
-			<%= f.text_area :body, :id => "question-box", :placeholder => "Spit it out in 200 characters max.", :maxlength => 200 %>
-			<br>
-			<%= f.submit "Submit Question" %>
-	<% end %>
-<% end %>
-
-
-
-
 
 <script>
       // Note: This will not work unless the page URL begins with "https://"
@@ -80,8 +40,6 @@
 
 
 
-
-
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);
@@ -100,19 +58,49 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
       }
-
     </script>
 
 
 
+<div id="user-bar">
+	<img	id="profile-pic" src=<%= @user.profile_pic%> >
+
+	<div id="user-info">
+		<p id="user-name-head"><%= @user.name %></p>
+		<!-- <p id="user-bio"><%= @user.bio %></p> -->
+		<p id="user-location"><%= @user.city %>, <%= @user.state %></p>
+		<p><%= link_to "@#{current_user.twitter_handle}", "https://twitter.com/#{current_user.twitter_handle}", :id => "user-twitter-handle" %></p>
+	</div>
+  <div id="map"></div>
+</div>
 
 
-<% @user.questions.each do |q| %>
-	<%= link_to q.body, question_path(q.id) %>
-	<br>
+  <% if current_user.id == @user.id %>
+  <div id="question-wrapper">
+	<%= form_for @question do |f| %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :address, :value => request.remote_ip %>
+			<%= f.hidden_field :latitude, :id => "lat", :placeholder => "latitude" %>
+			<%= f.hidden_field :longitude, :id => "lng", :placeholder => "longitude" %>
+			<br>
+			<%= f.label "Got something to say?", :id => 'question-box-head' %>
+			<br>
+			<%= f.text_area :body, :class => "question-box", :placeholder => "Spit it out in 200 characters max.", :maxlength => 200 %>
+			<%= f.submit "submit", :class => "question-submitter" %>
+  <% end %>
 <% end %>
 
-<br>
+
+
+
+<div id="previous-questions-wrapper">
+<% @user.questions.each do |q| %>
+  <div class="question-boxes">
+	 <%= link_to q.body, question_path(q.id), :class => "previous-questions" %>
+  </div>
+<% end %>
+</div>
+</div>
 
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY6jcNu9RczD-7e3357IyugkCaG_oAW6Q&callback=initMap">

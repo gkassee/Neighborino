@@ -41,19 +41,21 @@
 			</li>
 
 		</ul>
-			<% if current_user.address1 == nil %>
+				
+				<% if current_user.address1 == nil %>
 
-				<%= f.submit "create account", :class => "edit-submitter" %>
+					<%= f.submit "create account", :class => "edit-submitter" %>
 
-			<% else %>
-			
-				<%= f.submit "save", :class => "edit-submitter" %>
-				<br>
-				<%= button_to "delete my account", "user_delete", :class => "edit-submitter", method: :delete %>
+				<% else %>
+				
+					<%= f.submit "save", :class => "edit-submitter" %>
+					<br>
+					<%= button_to "delete my account", "user_delete", :class => "edit-submitter", method: :delete %>
 
-		<% end %>
+				<% end %>
 
 	<% end %>
+	
 </div>
 
 </body>

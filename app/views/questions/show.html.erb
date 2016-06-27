@@ -1,7 +1,7 @@
 <div class="wrapper">
 
 <header>
-	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
+	<%= link_to "NEIGHBORINO", user_path(current_user.id), :id => "site-logo" %>
 		<ul>
 				<li><%=link_to current_user.name, user_path(current_user.id)%> </li>
 				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
@@ -11,31 +11,22 @@
 
 <p class="question-body"><%= @question.body %></p>
 
-		<br>
-		IP Address: <%= @question.address %>
-		<br>
-		Latitude: <%= @question.latitude %>
-		<br>
-		Longitude: <%= @question.longitude %>
-		<br>
-		<br>
-
 
 
 <%= form_for @comment do |f| %>
 			<%= f.hidden_field :user_id, :value => current_user.id %>
 			<%= f.hidden_field :question_id, :value => params[:id] %>
-			<%= f.label :Comment %>
+			<%= f.label "Got anything to add?", :id => 'comment-box-head' %>
 			<br>
-			<%= f.text_area :body %>
+			<%= f.text_area :body, :class => 'comment-box' %>
 			<br>
-			<%= f.submit "Submit Comment" %>
+			<%= f.submit "submit comment", :class => 'comment-submitter' %>
 <% end %>
 
 
 
 <% @user.each do |user| %>
-		<%= link_to user.name, user_path(user.id) %>
+		<%= link_to user.name, user_path(user.id) %> 
 		<br>
 
 <% end %>
@@ -43,12 +34,8 @@
 
 
 <% @question.comments.each do |c| %>
-	<%= c.body %>
+	<span id="commentor-username-full"><%= link_to c.user.name, user_path(c.user.id), :id => 'commentor-username' %> says: </span> <%= c.body %>
 	<br>
 <% end %>
-
-<br>
-
-<%= link_to "HOME", root_path %>
 
 </div>

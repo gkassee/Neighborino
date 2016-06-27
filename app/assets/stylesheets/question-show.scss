@@ -1,5 +1,65 @@
 .question-body {
 	font-weight: 100;
-	width: 80%;
-	font-size: 30px;
+	width: 95%;
+	font-size: 35px;
+	color: #00E5DD;
+}
+
+#comment-box-head {
+	font-size: 23px;
+	font-weight: 700;
+	padding: 0;
+	margin: 0;
+	width: 200px;
+}
+
+.comment-box {
+	resize: none;
+	border: none;
+	width: 85%;
+	height: 50px;
+	border-radius: 8px 0px 0px 8px;
+	padding: 5px;
+	font-size: 15px;
+	float: left;
+	outline: none;
+	margin-top: 19px;
+	margin-bottom: 30px;
+}
+
+.comment-submitter {
+	height: 60px;
+	width: 14%;
+	background: #00BA8E;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	float: left;
+	color: white;
+	border-radius: 0px 8px 8px 0px;
+	border: 2px solid white;
+	font-size: 15px;
+	font-weight: 500;
+	outline: none;
+	margin-bottom: 30px;
+}
+
+.comment-submitter:hover {
+	background: #00936C;
+}
+
+#commentor-username {
+	font-weight: 700;
+	text-decoration: none;
+	color: white;
+}
+
+#commentor-username:hover {
+	color: yellow;
+}
+
+#commentor-username-full {
+	font-weight: 700;
+	padding-right: 10px;
+	text-decoration: none;
 }
