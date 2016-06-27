@@ -3,7 +3,11 @@
 <header>
 	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
 		<ul>
-				<li><%=link_to 'edit my profile', edit_user_path(@user) %> </li>
+        <% if current_user.id == @user.id %>
+  				<li><%=link_to 'edit my profile', user_path(current_user.id)%> </li>
+        <% else %>
+          <li><%=link_to current_user.name, user_path(current_user.id)%> </li>
+        <% end %>
 				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
 		</ul>
 </header>
