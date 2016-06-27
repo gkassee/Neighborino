@@ -1,30 +1,5 @@
-<h1><%= @user.name %>'s Questions:</h1>
-<img	id="profile-pic" src=<%= @user.profile_pic%>>
-<%= @user.bio %>
-
-
-
-<% if current_user.id == @user.id %>
-	<%= form_for @question do |f| %>
-			<%= f.hidden_field :user_id, :value => current_user.id %>
-			<%= f.hidden_field :address, :value => request.remote_ip %>
-			<%= f.hidden_field :latitude, :id => "lat", :value => "blue" %>
-			<%= f.hidden_field :longitude, :id => "lng", :value => "cheese" %>
-
-			<%= f.label :Question %>
-			<br>
-			<%= f.text_area :body, :id => "porto",  :value => "taco" %>
-			<br>
-			<%= f.submit "Submit Question" %>
-	<% end %>
-<% end %>
-
-
-
-
-
-<div id="map"></div>
-<script>
+<head>
+	<script>
       // Note: This will not work unless the page URL begins with "https://"
 
       function initMap() {
@@ -72,6 +47,37 @@
       }
 
     </script>
+</head>
+
+
+
+
+<h1><%= @user.name %>'s Questions:</h1>
+<img	id="profile-pic" src=<%= @user.profile_pic%>>
+<%= @user.bio %>
+
+
+
+<% if current_user.id == @user.id %>
+	<%= form_for @question do |f| %>
+			<%= f.hidden_field :user_id, :value => current_user.id %>
+			<%= f.hidden_field :address, :value => request.remote_ip %>
+			<%= f.hidden_field :latitude, :id => "lat", :value => "blue" %>
+			<%= f.hidden_field :longitude, :id => "lng", :value => "cheese" %>
+
+			<%= f.label :Question %>
+			<br>
+			<%= f.text_area :body, :id => "porto",  :value => "taco" %>
+			<br>
+			<%= f.submit "Submit Question" %>
+	<% end %>
+<% end %>
+
+
+
+
+
+<div id="map"></div>
 
 
 
