@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'gmaps4rails'
-
 gem 'geocoder'
 # Should allow login with Twitter...
 gem 'omniauth-twitter'
