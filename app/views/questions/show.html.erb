@@ -8,9 +8,10 @@
 		</ul>
 	</header>
 
-
-<p class="question-body"><%= @question.body %></p>
-
+<div id="q-body-wrapper">
+	<span id="comment-box-heaed"><%= current_user.name %> says:</span>
+	<p class="question-body"><%= @question.body %></p>
+</div>
 
 
 <%= form_for @comment do |f| %>
@@ -27,6 +28,7 @@
 
 <% @user.each do |user| %>
 		<%= link_to user.name, user_path(user.id) %> 
+		<% $twitter.update("@#{user.twitter_handle} New Post: https://test-neighborino.herokuapp.com/questions/#{@question.id}") %>
 		<br>
 
 <% end %>

@@ -1,8 +1,17 @@
+#q-body-wrapper {
+	width: 100%;
+	display: inline-block;
+}
+
 .question-body {
-	font-weight: 100;
-	width: 95%;
+	font-weight: 300;
+	width: 40%;
+	height: 200px;
+	float: left;
+	padding: 20px;
 	font-size: 35px;
-	color: #00E5DD;
+	background-color: #0CB3FB;
+	color: white;
 }
 
 #comment-box-head {

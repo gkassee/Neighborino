@@ -100,7 +100,7 @@
 	 <span class="previous-questions">
       <span class="date-time"><b>posted at:</b> <%= q.created_at.strftime("%I:%M%p - %A, %B, %d, %Y") %></span>
       <br>
-      <%= link_to q.body, question_path(q.id) %>
+      <%= link_to q.body, question_path(q.id), :class => "a-question" %>
     </span>
   </div>
 <% end %>
