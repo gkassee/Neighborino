@@ -95,9 +95,13 @@
 
 
 <div id="previous-questions-wrapper">
-<% @user.questions.each do |q| %>
+<% @user.questions.last(10).reverse.each do |q| %>
   <div class="question-boxes">
-	 <%= link_to q.body, question_path(q.id), :class => "previous-questions" %>
+	 <span class="previous-questions">
+      <span class="date-time"><b>posted at:</b> <%= q.created_at.strftime("%I:%M%p - %A, %B, %d, %Y") %></span>
+      <br>
+      <%= link_to q.body, question_path(q.id) %>
+    </span>
   </div>
 <% end %>
 </div>

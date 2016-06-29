@@ -50,9 +50,14 @@
 				
 					<%= f.submit "save", :class => "edit-submitter" %>
 
+
 				<% end %>
 
 	<% end %>
+
+		<% if current_user.address1 != nil %>
+			<%= button_to "delete account", user_delete_path, :class => "edit-submitter", method: :delete %>
+		<% end %>
 	
 </div>
 

@@ -16,8 +16,11 @@ class UserController < ApplicationController
   def update
     @user = current_user
     @user.update(user_params)
-    @user.save
-    redirect_to user_path(current_user.id)
+    if @user.save
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to edit_user_path(current_user.id)
+    end
   end
 
   def delete

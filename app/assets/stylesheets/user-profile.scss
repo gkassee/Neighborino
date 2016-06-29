@@ -9,7 +9,7 @@
 
 #question-wrapper {
 	padding-top: 40px;
-	width: 89%;
+	width: 65%;
 	margin: 0 auto;
 }
 
@@ -21,7 +21,7 @@
 .question-box {
 	resize: none;
 	border: none;
-	width: 85%;
+	width: 84%;
 	height: 50px;
 	border-radius: 8px 0px 0px 8px;
 	padding: 5px;
@@ -97,6 +97,12 @@
 	margin-top: 100px;
 }
 
+.question-boxes {
+	width: 99.8%;
+	background: white;
+	border: #00936C .5px solid;
+}
+
 .previous-questions {
 	font-weight: 100;
 	font-size: 28px;
@@ -104,12 +110,8 @@
 	color: #02C3BD;
 }
 
-.question-boxes {
-	width: 99.8%;
-	background: white;
-	border: #00936C .5px solid;
+.date-time {
+	font-size: 15px;
 }
-
-
 
 

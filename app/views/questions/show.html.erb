@@ -27,7 +27,6 @@
 
 <% @user.each do |user| %>
 		<%= link_to user.name, user_path(user.id) %> 
-		<% $twitter.update("@#{user.twitter_handle} New Q: https://neighborino-v2.herokuapp.com/questions/#{@question.id}") %>
 		<br>
 
 <% end %>
@@ -35,7 +34,7 @@
 
 
 <% @question.comments.each do |c| %>
-	<span id="commentor-username-full"><%= link_to c.user.name, user_path(c.user.id), :id => 'commentor-username' %> says: </span> <%= c.body %>
+	<span id="commentor-username-full"><%= link_to c.user.name, user_path(c.user.id), :id => 'commentor-username' %> says: </span> <%= c.body %> <%= c.created_at.strftime("%Y-%m-%d") %>
 	<br>
 <% end %>
 

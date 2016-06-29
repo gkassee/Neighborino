@@ -5,7 +5,12 @@ class SessionsController < ApplicationController
   		session[:omniauth] = auth.except('extra') #This gives you only the part you need and prevents all of the 'extra' stuff from coming along
   		user = User.sign_in_from_omniauth(auth) #passes the twitter user data to my user model
   		session[:user_id] = user.id # This sets the session and logs in the user
-  		redirect_to user_path(current_user.id), notice: "Hi diddly ho, #{current_user.name}!" #Takes you to the home page again, now with an active session
+
+      if current_user.address1 == nil
+        redirect_to edit_user_path(current_user.id)
+      else
+  		  redirect_to root_path, notice: "Hi diddly ho, #{current_user.name}!" #Takes you to the home page again, now with an active session
+      end
   end
 
 

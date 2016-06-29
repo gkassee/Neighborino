@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 	validates_confirmation_of :name, :address1, :city, :state, :zip
 	validates_presence_of :name, :address1, :city, :state, :zip, on: :update
 
+	validates :name, uniqueness: true
+
 	has_many :questions
 	has_many :comments
 
