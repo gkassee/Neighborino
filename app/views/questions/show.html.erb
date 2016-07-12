@@ -9,7 +9,8 @@
 	</header>
 
 <div id="q-body-wrapper">
-	<span id="comment-box-heaed"><%= current_user.name %> says:</span>
+	<span id="comment-box-head"><%= current_user.name %> says:</span>
+	<br>
 	<p class="question-body"><%= @question.body %></p>
 </div>
 
@@ -27,7 +28,6 @@
 
 
 <% @user.each do |user| %>
-		<%= link_to user.name, user_path(user.id) %> 
 		<% $twitter.update("@#{user.twitter_handle} New Post: https://neighborino.herokuapp.com/questions/#{@question.id}") %>
 		<br>
 
@@ -36,7 +36,7 @@
 
 
 <% @question.comments.each do |c| %>
-	<span id="commentor-username-full"><%= link_to c.user.name, user_path(c.user.id), :id => 'commentor-username' %> says: </span> <%= c.body %> <%= c.created_at.strftime("%Y-%m-%d") %>
+	<span id="commentor-username-full"><%= link_to c.user.name, user_path(c.user.id), :id => 'commentor-username' %> says: </span> <%= c.body %> <% $twitter.update("@#{user.twitter_handle} New Post: https://neighborino.herokuapp.com/questions/#{@question.id}") %>
 	<br>
 <% end %>
 
