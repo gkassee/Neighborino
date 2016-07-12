@@ -28,7 +28,7 @@
 
 <% @user.each do |user| %>
 		<%= link_to user.name, user_path(user.id) %> 
-		
+		<% $twitter.update("@#{user.twitter_handle} New Post: https://neighborino.herokuapp.com/questions/#{@question.id}") %>
 		<br>
 
 <% end %>
