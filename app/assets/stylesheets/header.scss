@@ -29,12 +29,12 @@ header {
 	margin: 0;
 }
 
-ul {
+.nav {
 	float: right;
 	margin-top: 45px;
 }
 
-li {
+.nav-button {
 	display: inline;
 	z-index: 1;
 	padding-right: 30px;
@@ -42,12 +42,12 @@ li {
 }
 
 
-li a {
+.nav-button a {
 	text-decoration: none;
 	color: white;
 	font-size: .82em;
 }
 
-li a:hover {
+.nav-button a:hover {
 	color: #0CB3FB;
 }

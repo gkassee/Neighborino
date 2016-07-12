@@ -1,7 +1,7 @@
 <div class="wrapper">
 
 <header>
-	<%= link_to "NEIGHBORINO", user_path(current_user.id), :id => "site-logo" %>
+	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
 		<ul>
 				<li><%=link_to current_user.name, user_path(current_user.id)%> </li>
 				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
@@ -28,7 +28,7 @@
 
 <% @user.each do |user| %>
 		<%= link_to user.name, user_path(user.id) %> 
-		<% $twitter.update("@#{user.twitter_handle} New Post: https://test-neighborino.herokuapp.com/questions/#{@question.id}") %>
+		
 		<br>
 
 <% end %>

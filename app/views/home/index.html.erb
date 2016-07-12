@@ -4,9 +4,9 @@
 	
 	<header>
 	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
-		<ul>
-				<li><%=link_to current_user.name, user_path(current_user.id)%> </li>
-				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
+		<ul class='nav'>
+				<li class='nav-button'><%=link_to current_user.name, user_path(current_user.id)%> </li>
+				<li class='nav-button'><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
 		</ul>
 	</header>
 
@@ -17,11 +17,44 @@
 
 	<% end %>
 
-	<p>Check out what's going on in your neighborhood:</p>
-		<% @question.each do |q| %>
-			<%= q.body %>
-		<% end %>
+<div class='home-body'>
 
+	<div id='user-sidebar-wrapper'>
+		<p class='head'>Your Neighborhood Address:</p>
+			<div id='user-sidebar'>
+			<%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{current_user.latitude},#{current_user.longitude}&markers=#{current_user.latitude},#{current_user.longitude}&zoom=15&size=300x300&key=AIzaSyA4BHW3txEdqfxzdTlPwaHsYRSZbfeIcd8", id: 'home-map' %>
+			<br>
+			<%= current_user.address1 %>
+			<br>
+			<%= current_user.city %>, <%= current_user.state %>
+			</div>
+	</div>
+
+	<div id='nearby-questions-wrapper'>
+		<p class='head'>Your Neighborhood Feed:</p>
+			<div id='nearby-question-box'>
+			<% @question.last(20).reverse.each do |q| %>
+
+				<div class='each-nearby-question-wrapper'>
+
+					<img	class="nearby-profile-pic" src=<%= q.user.profile_pic %> >
+
+					<div class='question-info-wrapper'>
+						<%= q.created_at.strftime("%I:%M%p - %A, %B, %d, %Y") %></span>
+						<br>
+						<br>
+						<span class='nearby-question-name'><%=link_to q.user.name, user_path(q.user_id) %> said:</span>
+						<br>
+						<blockquote>"<%= q.body %>"</blockquote>
+					</div>
+
+
+				</div>
+
+				<% end %>
+			</div>
+	</div>
+</div>
 
 <% else %>
 

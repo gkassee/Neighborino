@@ -4,6 +4,7 @@
 	padding: 0;
 	border-bottom: grey 0.5px solid;
 	display: inline-block;
+	text-align: center;
 	/*background: white;*/
 }
 
@@ -52,20 +53,23 @@
 
 #profile-pic {
 	float: left;
-	width: 150px;
+	width: 12%;
 	border-radius: 100%;
 	border: 2px grey solid;
 	margin: 20px 0px 30px 100px;
 }
 
 #user-info {
+	overflow: auto;
 	float: left;
-	margin-left: 30px;
+	margin-left: 2%;
+	width: 15%;
+	text-align: left;
 }
 
 #user-name-head {
 	font-weight: 100;
-	font-size: 55px;
+	font-size: 2.5em;
 	padding-top: 25px;
 }
 
@@ -86,11 +90,12 @@
 #map {
 	border: 2px solid grey;
 	border-radius: 7px;
+  /*width: 600px;*/
+  width: 50%;
   height: 150px;
-  float: right;
-  width: 600px;
-  margin-right: 150px;
-  margin-top: 20px;
+  float: left;
+  /*margin-right: 150px;*/
+  margin-top: 1.5%;
 }
 
 #previous-questions-wrapper {
@@ -99,26 +104,34 @@
 
 .question-boxes {
 	width: 99.8%;
-	background: white;
-	border: #00936C .5px solid;
+	/*background: white;*/
+	/*border: #00936C .5px solid;*/
+	padding: 2% 2% 5% 2%;
+	border-top: 1px grey solid;
 }
 
 .previous-questions {
 	font-weight: 100;
-	font-size: 28px;
+	font-size: 1.5em;
 	text-decoration: none;
-	color: #02C3BD;
-	padding: 10px;
+	color: white;
+	/*color: #02C3BD;*/
+	/*padding: 10px;*/
 }
 
 .a-question {
 	text-decoration: none;
+	color: white;
+	/*padding: 10px;*/
+}
+
+.a-question:hover {
 	color: #02C3BD;
-	padding: 10px;
 }
 
 .date-time {
 	font-size: 15px;
+	padding: 0;
 }
 
 

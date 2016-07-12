@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
+	
 	#sign-in-body {
 		background-image: url("http://www.alteredimages.com.au/wp/wp-content/uploads/2013/06/Aerial-Suburb.jpg");
 		background-size: 100%;
@@ -34,29 +34,6 @@
 		padding-left: 63px;
 		border-radius: 5px 45px;
 		box-shadow: black 1px 4px 7px;
-
-
-		/*font-size: 120px;
-		color: white;
-		font-family: 'Yanone Kaffeesatz', sans-serif;
-		font-weight: 700;
-		padding: 0;
-		margin: 0;
-		text-align: center;
-		text-shadow: 1px 1px #515152,
-								 2px 2px #515152,
-								 3px 3px #515152,
-								 4px 4px #515152,
-								 5px 5px #515152,
-								 6px 6px #515152,
-								 7px 7px #515152,
-								 8px 8px #515152,
-								 9px 9px #515152,
-								 10px 10px #515152,
-								 11px 11px #515152,
-								 12px 12px #515152;
-		margin-top: 7%;
-		margin-bottom: 10%;*/
 	}
 
 	#twitter-login {
@@ -87,10 +64,104 @@
 		opacity: 0.12;
 	}
 
+	.flash-notice {
+		text-align: center;
+		width: 250px;
+		background: yellow;
+		opacity: 0.75;
+		color: black;
+		border-radius: 10px;
+		padding: 5px;
+		margin: 0 auto;
+		margin-top: 1%;
+		font-weight: 400;
+	}
+
+	.home-body {
+		overflow: auto;
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 1%;
+	}
+
+	#user-sidebar-wrapper {
+		position: fixed;
+		float: left;
+		overflow: auto;
+		width: 22%;
+	}
+
+	#user-sidebar {
+		overflow: auto;
+		/*bottom: 4%;*/
+		/*height: 80%;*/
+		border-top: 1px grey solid;
+		border-bottom: 1px grey solid;
+		text-align: center;
+		padding: 3%;
+	}
+
+	#home-map {
+		border-radius: 100%;
+		border: 3px grey solid;
+		width: 75%;
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}
+
+	.head {
+		font-weight: 100;
+		font-size: 1.5vw;
+		font-weight: 500;
+	}
+
+	#nearby-questions-wrapper {
+		overflow: hidden ;
+		width: 60%;
+		height: 80vh;
+		float: right;
+	}
+
+	#nearby-question-box {
+		height: 92%;
+		overflow-y: scroll;
+	}
+
+	.each-nearby-question-wrapper {
+		overflow: auto;
+		border-top: 1px grey solid;
+		/*border-bottom: 1px grey solid;*/
+		padding-top: 5%;
+		padding-bottom: 5%;
+		width: 100%;
+	}
+
+	.nearby-profile-pic {
+		width: 13%;
+		float: left;
+		padding: 3%;
+		border-radius: 100%;
+		margin-top: 3%
+	}
+
+	.question-info-wrapper {
+		overflow: auto;
+		float: left;
+		padding: 0;
+		margin: 0;
+		width: 80%;
+	}
+
+	.nearby-question-name {
+		overflow: auto;
+		font-weight: bold;
+		padding: 1% 0px 1% 0px;
+	}
 
 
-
-
+	blockquote {
+		margin-left: 0;
+	}
 
 
 

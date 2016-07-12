@@ -1,14 +1,14 @@
 <div class="wrapper">
 
 <header>
-	<%= link_to "NEIGHBORINO", user_path(current_user.id), :id => "site-logo" %>
-		<ul>
+	<%= link_to "NEIGHBORINO", root_path, :id => "site-logo" %>
+		<ul class='nav'>
         <% if current_user.id == @user.id %>
-  				<li><%=link_to 'edit my profile', edit_user_path(@user) %> </li>
+  				<li class='nav-button'><%=link_to 'edit my profile', edit_user_path(@user) %> </li>
         <% else %>
-          <li><%=link_to current_user.name, user_path(current_user.id) %> </li>
+          <li class='nav-button'><%=link_to current_user.name, user_path(current_user.id) %> </li>
         <% end %>
-				<li><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
+				<li class='nav-button'><%= link_to('sign out', sign_out_path, :method => :delete) %></li>
 		</ul>
 </header>
 
@@ -71,6 +71,7 @@
 		<p id="user-location"><%= @user.city %>, <%= @user.state %></p>
 		<p><%= link_to "@#{@user.twitter_handle}", "https://twitter.com/#{@user.twitter_handle}", :id => "user-twitter-handle" %></p>
 	</div>
+
   <div id="map"></div>
 </div>
 
@@ -96,13 +97,15 @@
 
 <div id="previous-questions-wrapper">
 <% @user.questions.last(10).reverse.each do |q| %>
+
   <div class="question-boxes">
 	 <span class="previous-questions">
-      <span class="date-time"><b>posted at:</b> <%= q.created_at.strftime("%I:%M%p - %A, %B, %d, %Y") %></span>
-      <br>
-      <%= link_to q.body, question_path(q.id), :class => "a-question" %>
+        <span class="date-time"><b>posted at:</b> <%= q.created_at.strftime("%I:%M%p - %A, %B, %d, %Y") %></span>
+        <br>
+        <%= link_to q.body, question_path(q.id), :class => "a-question" %>
     </span>
   </div>
+
 <% end %>
 </div>
 </div>
