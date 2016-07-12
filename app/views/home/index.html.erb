@@ -37,9 +37,7 @@
 
 				<div class='each-nearby-question-wrapper'>
 
-				<% if q.user.profile_pic %>
 					<img	class="nearby-profile-pic" src=<%= q.user.profile_pic %> >
-				<% end %>
 
 					<div class='question-info-wrapper'>
 						<%= q.created_at.strftime("%I:%M%p - %A, %B, %d, %Y") %></span>
